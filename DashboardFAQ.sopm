@@ -4,7 +4,7 @@
     <Version>0.0.1</Version>
     <Framework>2.4.x</Framework>
     <Vendor>Daniel Obee</Vendor>
-    <URL>http://myhammer.de/</URL>
+    <URL>http://33achtzig.de/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
     <ChangeLog Version="0.0.1" Date="2010-07-27 21:13:00">Initial Release</ChangeLog>
     <Description Lang="en">A way to display recent FAQ changes in the Dashboard.</Description>
