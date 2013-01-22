@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<otrs_config version="1.0" init="Application">
+    <ConfigItem Name="DashboardBackend###0270-FAQ" Required="0" Valid="1">
+        <Description Lang="en">Parameters for the dashboard FAQ News. "Group" are used to restriced access to the plugin (e. g. Group: admin;group1;group2;). "Default" means if the plugin is enabled per default.</Description>
+        <Description Lang="de">Parameter für die Dashboard FAQ News. "Group" ist verwendet um den Zugriff auf das Plugin einzuschränken (z. B. Group: admin;group1;group2;). "Default" gibt an ob das Plugin per default aktiviert ist.</Description>
+        <Group>Framework</Group>
+        <SubGroup>Frontend::Agent::Dashboard</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="Module">Kernel::Output::HTML::DashboardFAQ</Item>
+                <Item Key="Title">FAQ News</Item>
+                <Item Key="Description">FAQ News</Item>
+                <Item Key="Block">ContentSmall</Item>
+                <Item Key="Group">faq</Item>
+                <Item Key="Default">1</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+</otrs_config>

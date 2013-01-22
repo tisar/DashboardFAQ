@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>DashboardFAQNews</Name>
+    <Version>0.0.1</Version>
+    <Framework>2.4.x</Framework>
+    <Vendor>Daniel Obee</Vendor>
+    <URL>http://myhammer.de/</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</License>
+    <ChangeLog Version="0.0.1" Date="2010-07-27 21:13:00">Initial Release</ChangeLog>
+    <Description Lang="en">A way to display recent FAQ changes in the Dashboard.</Description>
+    <Description Lang="de">Eine Möglichkeit, die neuesten FAQ Änderungen im Dashboard anzuzeigen.</Description>
+    <PackageRequired Version="1.6.0">FAQ</PackageRequired>		
+    <BuildDate>?</BuildDate>
+    <BuildHost>?</BuildHost>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/DashboardFAQ.xml"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/Standard/AgentDashboardFAQ.dtl"></File>
+        <File Permission="644" Location="Kernel/Output/HTML/DashboardFAQ.pm"></File>
+    </Filelist>
+</otrs_package>

@@ -1,0 +1,100 @@
+# --
+# AgentDashboardFAQ.dtl - Displays new and recently changed FAQ in dashboard
+# Copyright (C) 2010 Daniel Obée
+# --
+# $Id:
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+
+
+<!-- dtl:block:Explorer-->
+<table border="0" width="100%" cellspacing="0" cellpadding="3">
+  <tr>
+    <td class="mainbody">
+
+<!-- dtl:block:ExplorerLatestCreate -->
+      <table border="0" width="100%" cellspacing="0" cellpadding="2">
+        <tr>
+          <td><strong>$Text{"LatestCreatedItems"}</strong></td>
+<!-- dtl:block:ExplorerLatestCreateRss -->
+          <td valign="top" align="right">
+            <a href="$Env{"Baselink"}Action=$Env{"Action"}&Subaction=rss&Type=Created" title="$Text{"FAQ News (new created)"}"><img src="$Env{"Images"}/rss.png" border="0"></a>
+          </td>
+<!-- dtl:block:ExplorerLatestCreateRss -->
+        </tr>
+      </table>
+      <table>
+<!-- dtl:block:ExplorerLatestCreateFAQItemRow -->
+        <tr>
+          <td valign="top"><img src="$Env{"Images"}$Config{"FAQ::Item::Icon"}"></td>
+          <td>
+            <a href="$Env{"Baselink"}Action=AgentFAQ&CategoryID=$QData{"CategoryID"}&ItemID=$QData{"ItemID"}" title="$QData{"Title"} ($QData{"CategoryName"})">
+            $QData{"Title","40"} ($QData{"CategoryName","40"})
+            </a>
+            <br/>
+            <i class="small">($QData{"Language"}) $TimeShort{"$Data{"Created"}"}</i>
+          </td>
+        </tr>
+<!-- dtl:block:ExplorerLatestCreateFAQItemRow -->
+      </table>
+<!-- dtl:block:ExplorerLatestCreate -->
+
+
+<!-- dtl:block:ExplorerLatestChange -->
+      <table border="0" width="100%" cellspacing="0" cellpadding="2">
+        <tr>
+          <td><strong>$Text{"LatestChangedItems"}</strong></td>
+        </tr>
+      </table>
+      <table>
+<!-- dtl:block:ExplorerLatestChangeFAQItemRow -->
+        <tr>
+          <td valign="top"><img src="$Env{"Images"}$Config{"FAQ::Item::Icon"}"></td>
+          <td>
+            <a href="$Env{"Baselink"}Action=AgentFAQ&CategoryID=$QData{"CategoryID"}&ItemID=$QData{"ItemID"}" title="$QData{"Title"} ($QData{"CategoryName"})">
+            $QData{"Title","40"} ($QData{"CategoryName","40"})
+            </a>
+            <br/>
+            <i class="small">($QData{"Language"}) $TimeShort{"$Data{"Changed"}"}</i>
+          </td>
+        </tr>
+<!-- dtl:block:ExplorerLatestChangeFAQItemRow -->
+      </table>
+<!-- dtl:block:ExplorerLatestChange -->
+
+# --- Top 10 - remove ## to display in dashboard
+
+#<!-- dtl:block:ExplorerTop10 -->
+#      <table border="0" width="100%" cellspacing="0" cellpadding="2">
+#        <tr>
+#          <td><strong>$Text{"Top10Items"}</strong></td>
+#        </tr>
+#      </table>
+#      <table>
+#<!-- dtl:block:ExplorerTop10FAQItemRow -->
+#        <tr>
+#          <td><img src="$Env{"Images"}$Config{"FAQ::Item::Icon"}"></td>
+#          <td>$QData{"Number"}.</td>
+#          <td>
+#            <a href="$Env{"Baselink"}Action=AgentFAQ&CategoryID=$QData{"CategoryID"}&ItemID=$QData{"ItemID"}" title="$QData{"Title"} ($QData{"CategoryName"})">
+#            $QData{"Title","40"} ($QData{"CategoryName","40"})
+#            </a>
+#            <br/>
+#            <i class="small">($QData{"Language"}) $TimeShort{"$Data{"Changed"}"}</i>
+#          </td>
+#        </tr>
+#<!-- dtl:block:ExplorerTop10FAQItemRow -->
+#      </table>
+#<!-- dtl:block:ExplorerTop10 -->
+
+# ---
+
+    </td>
+  </tr>
+</table>
+<!-- dtl:block:Explorer -->
+
+
